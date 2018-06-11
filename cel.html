@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>动态生成el</title>
+</head>
+
+<body>
+    <!-- 1. -->
+    <ul>
+        <li>li1</li>
+        <li>li2</li>
+        <li>li3</li>
+    </ul>
+
+    <!-- 2. -->
+    <ul>
+        <li>
+            <a href="">a1</a>
+        </li>
+        <li>
+            <a href="">a2</a>
+        </li>
+        <li>
+            <a href="">a3</a>
+        </li>
+    </ul>
+
+    <!-- 3. -->
+    <ul>
+        <li>
+            <a href="">a1</a>
+            <ul>
+                <li>
+                    <a href="">a11</a>
+                </li>
+                <li>
+                    <a href="">a12</a>
+                </li>
+                <li>
+                    <a href="">a13</a>
+                </li>
+                <li>
+                    <a href="">a14</a>
+                </li>
+                <li>
+                    <a href="">a15</a>
+                </li>
+                <li>
+                    <a href="">a16</a>
+                </li>
+                <li>
+                    <a href="">a17</a>
+                </li>
+                <li>
+                    <a href="">a18</a>
+                </li>
+                <li>
+                    <a href="">a19</a>
+                </li>
+                <li>
+                    <a href="">a110</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="">a2</a>
+            <ul>
+                <li>
+                    <a href="">a11</a>
+                </li>
+                <li>
+                    <a href="">a12</a>
+                </li>
+                <li>
+                    <a href="">a13</a>
+                </li>
+                <li>
+                    <a href="">a14</a>
+                </li>
+                <li>
+                    <a href="">a15</a>
+                </li>
+                <li>
+                    <a href="">a16</a>
+                </li>
+                <li>
+                    <a href="">a17</a>
+                </li>
+                <li>
+                    <a href="">a18</a>
+                </li>
+                <li>
+                    <a href="">a19</a>
+                </li>
+                <li>
+                    <a href="">a110</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="">a3</a>
+            <ul>
+                <li>
+                    <a href="">a11</a>
+                </li>
+                <li>
+                    <a href="">a12</a>
+                </li>
+                <li>
+                    <a href="">a13</a>
+                </li>
+                <li>
+                    <a href="">a14</a>
+                </li>
+                <li>
+                    <a href="">a15</a>
+                </li>
+                <li>
+                    <a href="">a16</a>
+                </li>
+                <li>
+                    <a href="">a17</a>
+                </li>
+                <li>
+                    <a href="">a18</a>
+                </li>
+                <li>
+                    <a href="">a19</a>
+                </li>
+                <li>
+                    <a href="">a110</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="">a4</a>
+            <ul>
+                <li>
+                    <a href="">a11</a>
+                </li>
+                <li>
+                    <a href="">a12</a>
+                </li>
+                <li>
+                    <a href="">a13</a>
+                </li>
+                <li>
+                    <a href="">a14</a>
+                </li>
+                <li>
+                    <a href="">a15</a>
+                </li>
+                <li>
+                    <a href="">a16</a>
+                </li>
+                <li>
+                    <a href="">a17</a>
+                </li>
+                <li>
+                    <a href="">a18</a>
+                </li>
+                <li>
+                    <a href="">a19</a>
+                </li>
+                <li>
+                    <a href="">a110</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="">a5</a>
+            <ul>
+                <li>
+                    <a href="">a11</a>
+                </li>
+                <li>
+                    <a href="">a12</a>
+                </li>
+                <li>
+                    <a href="">a13</a>
+                </li>
+                <li>
+                    <a href="">a14</a>
+                </li>
+                <li>
+                    <a href="">a15</a>
+                </li>
+                <li>
+                    <a href="">a16</a>
+                </li>
+                <li>
+                    <a href="">a17</a>
+                </li>
+                <li>
+                    <a href="">a18</a>
+                </li>
+                <li>
+                    <a href="">a19</a>
+                </li>
+                <li>
+                    <a href="">a110</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="">a6</a>
+            <ul>
+                <li>
+                    <a href="">a11</a>
+                </li>
+                <li>
+                    <a href="">a12</a>
+                </li>
+                <li>
+                    <a href="">a13</a>
+                </li>
+                <li>
+                    <a href="">a14</a>
+                </li>
+                <li>
+                    <a href="">a15</a>
+                </li>
+                <li>
+                    <a href="">a16</a>
+                </li>
+                <li>
+                    <a href="">a17</a>
+                </li>
+                <li>
+                    <a href="">a18</a>
+                </li>
+                <li>
+                    <a href="">a19</a>
+                </li>
+                <li>
+                    <a href="">a110</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="">a7</a>
+            <ul>
+                <li>
+                    <a href="">a11</a>
+                </li>
+                <li>
+                    <a href="">a12</a>
+                </li>
+                <li>
+                    <a href="">a13</a>
+                </li>
+                <li>
+                    <a href="">a14</a>
+                </li>
+                <li>
+                    <a href="">a15</a>
+                </li>
+                <li>
+                    <a href="">a16</a>
+                </li>
+                <li>
+                    <a href="">a17</a>
+                </li>
+                <li>
+                    <a href="">a18</a>
+                </li>
+                <li>
+                    <a href="">a19</a>
+                </li>
+                <li>
+                    <a href="">a110</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="">a8</a>
+            <ul>
+                <li>
+                    <a href="">a11</a>
+                </li>
+                <li>
+                    <a href="">a12</a>
+                </li>
+                <li>
+                    <a href="">a13</a>
+                </li>
+                <li>
+                    <a href="">a14</a>
+                </li>
+                <li>
+                    <a href="">a15</a>
+                </li>
+                <li>
+                    <a href="">a16</a>
+                </li>
+                <li>
+                    <a href="">a17</a>
+                </li>
+                <li>
+                    <a href="">a18</a>
+                </li>
+                <li>
+                    <a href="">a19</a>
+                </li>
+                <li>
+                    <a href="">a110</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="">a9</a>
+            <ul>
+                <li>
+                    <a href="">a11</a>
+                </li>
+                <li>
+                    <a href="">a12</a>
+                </li>
+                <li>
+                    <a href="">a13</a>
+                </li>
+                <li>
+                    <a href="">a14</a>
+                </li>
+                <li>
+                    <a href="">a15</a>
+                </li>
+                <li>
+                    <a href="">a16</a>
+                </li>
+                <li>
+                    <a href="">a17</a>
+                </li>
+                <li>
+                    <a href="">a18</a>
+                </li>
+                <li>
+                    <a href="">a19</a>
+                </li>
+                <li>
+                    <a href="">a110</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="">a10</a>
+            <ul>
+                <li>
+                    <a href="">a11</a>
+                </li>
+                <li>
+                    <a href="">a12</a>
+                </li>
+                <li>
+                    <a href="">a13</a>
+                </li>
+                <li>
+                    <a href="">a14</a>
+                </li>
+                <li>
+                    <a href="">a15</a>
+                </li>
+                <li>
+                    <a href="">a16</a>
+                </li>
+                <li>
+                    <a href="">a17</a>
+                </li>
+                <li>
+                    <a href="">a18</a>
+                </li>
+                <li>
+                    <a href="">a19</a>
+                </li>
+                <li>
+                    <a href="">a110</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+
+
+    <ul id="id1">
+
+    </ul>
+    <ul id="id2">
+
+    </ul>
+    <ul id="id3">
+
+    </ul>
+
+
+</body>
+<script>
+
+    function create(id){
+
+        
+        var ul_wap = document.getElementById('id1');
+       
+        for(var i=1;i<=3;i++){
+           
+        var li_ee= document.createElement('li');
+        var txt= "li"+i;
+        li_ee.innerText=txt;
+        ul_wap.appendChild(li_ee);
+        }
+        
+      
+    }
+
+    function create1 (id){
+     var ul_wap = document.getElementById('id2');
+     for(var i=1;i<=3;i++){
+         var li_ee=document.createElement('li');
+         var a_s= document.createElement("a");
+         var txt = "a"+i;
+         a_s.innerText=txt;
+         a_s.setAttribute('href','#');
+         li_ee.appendChild(a_s);
+         ul_wap.appendChild(li_ee);
+
+     }
+     
+     
+    }
+    function create2(id){
+        var ul_wap= document.getElementById(id);
+        for(var i=1;i<=10;i++){
+            var li_ee=document.createElement('li');
+            var a_s=document.createElement('a');
+            var ul_wa1=document.createElement('ul');
+            var txt ="a"+i;
+            a_s.setAttribute('href','#');
+              for(var j=1;j<=10;j++){
+                var li_ee1=document.createElement('li');
+                var a_s1=document.createElement('a');
+                var txt1 ="a"+j;
+                a_s1.innerText=txt1;
+                li_ee1.appendChild(a_s1);
+                ul_wa1.appendChild(li_ee1);
+                a_s1.setAttribute('href','#');
+              }
+            ul_wap.appendChild(li_ee);
+            li_ee.appendChild(a_s);
+            li_ee.appendChild(ul_wa1);
+            a_s.innerHTML=txt;
+        }
+    }
+    
+
+    function initUI(){
+        create();
+        create1();
+        create2('id3');
+
+    }
+
+
+    window.onload = initUI;
+</script>
+</html>
+

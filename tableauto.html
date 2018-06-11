@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>动态生成标签</title>
+</head>
+<body>
+    <div id="show">
+        <div id="c0_header">
+
+        </div>
+        <div id="c0_body">
+
+        </div>
+    </div>
+    
+</body>
+<script>
+    function textLeft (text){
+          var lab = document.createElement('label');
+          var txt = text +':';
+          lab.innerText=txt;
+          return lab;
+    }
+    function searchInput(text){
+        var s_input = document.createElement('input');
+        s_input.setAttribute('type','text');
+        s_input.setAttribute('placeholder',text);
+        return s_input;
+
+
+    }
+    function createlines (id,datas){
+        // 创建外层
+        var ul_wrapper = document.createElement('ul');
+        var li_row = document.createElement('li');
+        var ul_row = document.createElement('ul');
+        for ( var i=0;i<3;i++){
+            var col = document.createElement('li');
+            if(0==i){
+                var lab=textLeft(datas['row11']['name']);
+                var input =searchInput(datas['row11']['val']);
+                console.log(input);
+                col.appendChild(lab);
+                col.appendChild(input);
+            }else if(1==i){
+                var sbtn=document.createElement('button');
+                var abtn=document.createElement('button');
+                sbtn.innerText="搜索";
+                abtn.innerText="添加";
+                col.appendChild(sbtn);
+                col.appendChild(abtn); 
+
+            }else{
+                col.style.display="none";
+            }
+            ul_row.appendChild(col);
+        }
+        li_row.appendChild(ul_row);
+        ul_wrapper.appendChild(li_row);
+        document.getElementById(id).appendChild(ul_wrapper);
+    }
+    function createcols(id,datas){
+           var cols=datas['datas'].length;
+           var rows=Math.ceil(cols/3);
+           var ul_wrapper=document.createElement('ul');
+           for(var i=0;i<rows;i++){
+               (function(num){
+                var li_row=document.createElement('li');
+                var ul_row=document.createElement('ul');
+                    for(var j=0;j<3;j++){
+                        var col=document.createElement('li');
+                        col.style.float="left";
+                        if((num*3+j)<cols){
+                        var text=textLeft(datas['datas'][num*3+j]['row']['name'])
+                        var input =searchInput(datas['datas'][num*3+j]['row']['val'])
+                     col.appendChild(text);
+                     col.appendChild(input);
+
+                        }else{
+                            col.style.display="none";
+                        }
+                       
+                     ul_row.appendChild(col);
+                    }
+                    ul_row.style.overflow='hidden';
+                    ul_row.style.border="1px solid red"
+                    li_row.appendChild(ul_row)
+                    ul_wrapper.appendChild(li_row);
+
+                    
+               })(i);
+               
+
+           }
+           
+           document.getElementById(id).appendChild(ul_wrapper);
+    }
+    function createHeader(lines,id,datas){
+        switch (lines) {
+            case 0:
+                
+                break;
+            case 1:
+               {
+                // 创建ul
+                createlines(id,datas);
+                break;
+            } 
+            default:
+            {
+                createcols(id,datas);
+            }
+                break;
+        }
+    }
+    function initEl() {
+        // var dd={row11:{name:'关键字',val:'搜索'}};
+        //  createHeader(1,"c0_header",dd);
+        var dd= {
+            datas:[
+                {row:{name:'关键字1',val:'搜索'}},
+                {row:{name:'关键字2',val:'搜索'}},
+                {row:{name:'关键字3',val:'搜索'}},
+                {row:{name:'关键字4',val:'搜索'}},
+                {row:{name:'关键字5',val:'搜索'}},
+                {row:{name:'关键字6',val:'搜索'}},
+                
+            ]
+        }
+        createcols("c0_header",dd);
+    }
+    window.onload=initEl;
+</script>
+</html>

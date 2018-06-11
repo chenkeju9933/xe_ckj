@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- shortcut icon 标题上的小图标 -->
+    <!-- <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> -->
+    <title>小额贷款管理平台</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/ckj.css">
+
+
+</head>
+
+<body>
+    <!-- 页面结构 -->
+    <!-- 页面头部区域 -->
+    <div class="xe-header">
+        <h1>
+            <a href="javascript:void(0);">
+                <img id="xe_logo" src="./sources/images/logo2.png" alt="小额贷款平台">
+            </a>
+        </h1>
+        <h2>
+            小额贷款管理平台
+        </h2>
+        <ul class="h-navs">
+            <li class="selected">
+                <a href="javascript:void(0);"></a>
+            </li>
+            <li>
+                <a href="javascript:void(0);"></a>
+            </li>
+            <li>
+                <a href="javascript:void(0);"></a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <span>管理员</span>
+                    <span>(超级管理员)</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);"></a>
+            </li>
+        </ul>
+        <div style="clear: both;"></div>
+    </div>
+
+    <!-- 页面内容区域 -->
+    <div class="xe-main">
+        <div class="main-left">
+            <ul id="main_navs">
+
+            </ul>
+        </div>
+        <div class="main-right">
+            <div id="show">
+                <div class="c4-tp">
+                    <img src="./sources/images/M.png" alt="">
+                    <span>客户照片</span>
+
+                </div>
+                <div class="c4-mid" id="c4_mid">
+
+                </div>
+                <div class="table-wrapper">
+                    <div class="table" id="table">
+                        <ul class="th" id="th">
+                            
+
+                        </ul>
+                        <div id="t_body">
+                           <ul class="tr">
+                            
+
+                           </ul>
+                        </div>
+
+                      
+                    </div>
+                </div>
+                <div class="pages" id="pages">
+                    <ul></ul>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- 页脚 -->
+    <div class="xe-footer">
+        <p>国家大学科技园</p>
+    </div>
+
+
+</body>
+<script src="./js/index.js"></script>
+<script>
+
+   
+window.onload = function () {
+        createLeftNavs('main_navs');
+        initTree('main_navs');
+        initUi();
+        createPages('pages',2);
+        // var el = getContentWrappper();
+        // for (var i=0;i<21;i++){
+        //     pages_total_data.push(i);
+        // }
+        showPage(el,5);
+        createPages('pages',)
+        }
+</script>
+
+
+
+</html>
